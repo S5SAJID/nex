@@ -1,13 +1,13 @@
-# File Organizer Examples
+# nex Examples
 
-This document provides practical examples of how to use File Organizer for various scenarios.
+This document provides practical examples of how to use nex for various scenarios.
 
 ## Basic Examples
 
 ### Clean up a Downloads Folder
 
 ```bash
-file-organizer --dir ~/Downloads
+nex --dir ~/Downloads
 ```
 
 This will scan your Downloads folder, categorize files, and guide you through organizing them.
@@ -15,7 +15,7 @@ This will scan your Downloads folder, categorize files, and guide you through or
 ### Clean up but Exclude Some Files
 
 ```bash
-file-organizer --dir ~/Desktop --exclude "*.iso" --exclude "backup*"
+nex --dir ~/Desktop --exclude "*.iso" --exclude "backup*"
 ```
 
 This will organize your Desktop but leave any ISO files and files starting with "backup" in place.
@@ -38,7 +38,7 @@ directories=(
 
 for dir in "${directories[@]}"; do
   echo "Cleaning $dir..."
-  file-organizer --dir "$dir" --exclude "*.tmp"
+  nex --dir "$dir" --exclude "*.tmp"
 done
 
 echo "All directories cleaned!"
@@ -46,16 +46,16 @@ echo "All directories cleaned!"
 
 ### Integration with Cron for Scheduled Cleaning
 
-You can schedule File Organizer to run periodically using cron:
+You can schedule nex to run periodically using cron:
 
 ```
-# Run File Organizer on Downloads folder every Sunday at 1 AM
-0 1 * * 0 /usr/local/bin/file-organizer --dir /home/user/Downloads --exclude "*.partial"
+# Run nex on Downloads folder every Sunday at 1 AM
+0 1 * * 0 /usr/local/bin/nex --dir /home/user/Downloads --exclude "*.partial"
 ```
 
 ### Python Script for Custom Processing
 
-You can use File Organizer programmatically in your Python scripts:
+You can use nex programmatically in your Python scripts:
 
 ```python
 import sys
@@ -113,3 +113,10 @@ if __name__ == "__main__":
         sys.exit(1)
         
     cleanup_user_directories(sys.argv[1]) 
+```
+
+# First time installation:
+pip install git+https://github.com/S5SAJID/nex.git
+
+# Then use nex as shown in the examples:
+nex --dir ~/Downloads 

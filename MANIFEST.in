@@ -1,0 +1,7 @@
+include LICENSE
+include README.md
+include pyproject.toml
+recursive-include file_organizer *.py
+recursive-include file_organizer/docs *.md
+prune file_organizer/docs/__pycache__
+global-exclude *.py[cod] __pycache__ *.so .DS_Store 

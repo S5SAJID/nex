@@ -1,25 +1,25 @@
-# File Organizer User Guide
+# nex User Guide
 
 ## Introduction
 
-File Organizer is a powerful CLI tool that helps you clean up messy directories by automatically organizing files into categorized folders based on their file types. It provides a rich, interactive interface that guides you through the organization process and ensures you maintain control over what happens to your files.
+nex is a powerful CLI tool that helps you clean up messy directories by automatically organizing files into categorized folders based on their file types. It provides a rich, interactive interface that guides you through the organization process and ensures you maintain control over what happens to your files.
 
 ## Installation
 
 ```bash
-# Install from PyPI
-pip install file-organizer
+# Install from GitHub
+pip install git+https://github.com/S5SAJID/nex.git
 
 # Verify installation
-file-organizer --help
+nex --help
 ```
 
 ## Basic Usage
 
-The simplest way to use File Organizer is to run it without any arguments:
+The simplest way to use nex is to run it without any arguments:
 
 ```bash
-file-organizer
+nex
 ```
 
 This will start the interactive CLI guide that will:
@@ -31,22 +31,22 @@ This will start the interactive CLI guide that will:
 
 ## Command Line Options
 
-For more advanced usage, File Organizer supports several command-line arguments:
+For more advanced usage, nex supports several command-line arguments:
 
 ```bash
 # Organize a specific directory
-file-organizer --dir /path/to/directory
+nex --dir /path/to/directory
 
 # Exclude specific file patterns
-file-organizer --exclude "*.log" --exclude "temp/*"
+nex --exclude "*.log" --exclude "temp/*"
 
 # Skip project structure detection
-file-organizer --no-project-detection
+nex --no-project-detection
 ```
 
 ## Project Structure Detection
 
-When File Organizer detects that it's running in a project directory (containing files like `requirements.txt`, `package.json`, or directories like `src`, `.git`, etc.), it takes extra precautions:
+When nex detects that it's running in a project directory (containing files like `requirements.txt`, `package.json`, or directories like `src`, `.git`, etc.), it takes extra precautions:
 
 1. It identifies critical project files that shouldn't be moved
 2. It shows a warning that you're organizing a project directory
@@ -57,7 +57,7 @@ This feature helps prevent breaking functional project structures by accidentall
 
 ## Categories
 
-File Organizer sorts files into the following categories:
+nex sorts files into the following categories:
 
 | Category     | Extensions                                     |
 |--------------|------------------------------------------------|
@@ -75,7 +75,7 @@ File Organizer sorts files into the following categories:
 
 ## Handling Duplicates
 
-File Organizer can detect duplicate files by comparing their content (not just filenames). When duplicates are found:
+nex can detect duplicate files by comparing their content (not just filenames). When duplicates are found:
 
 1. Files are grouped by identical content
 2. The first file in each group is marked to keep (default)
@@ -101,6 +101,6 @@ If important project files are being moved when they shouldn't be:
 ### Program Hangs on Large Files
 
 When processing very large files:
-- File Organizer reads files in chunks to calculate hashes
+- nex reads files in chunks to calculate hashes
 - This might take some time for extremely large files
 - Consider excluding very large files with `--exclude` if this is a problem 

@@ -1,5 +1,5 @@
 """
-Entry point for the file organizer CLI.
+Entry point for the nex CLI.
 """
 
 import argparse

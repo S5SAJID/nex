@@ -1,6 +1,6 @@
-# File Organizer API Documentation
+# nex API Documentation
 
-This document describes the internal API of File Organizer for developers who want to use it programmatically or extend its functionality.
+This document describes the internal API of nex for developers who want to use it programmatically or extend its functionality.
 
 ## Core Classes
 
@@ -37,6 +37,18 @@ removed_files = organizer.remove_duplicates(files_to_remove)
 
 # Get statistics about the organization
 stats = organizer.get_stats()
+```
+
+## Command Line Usage
+
+To use nex from your shell:
+
+```bash
+# Basic usage
+nex
+
+# With options
+nex --dir ~/Downloads --exclude "*.tmp"
 ```
 
 #### Methods

@@ -29,10 +29,9 @@ class FileOrganizerCLI:
             str: Selected directory path
         """
         self.console.print(Panel.fit(
-            "[bold blue]File Organizer[/bold blue]\n"
-            "This tool will help you organize messy directories by moving files to appropriate folders.",
-            title="Welcome",
-            border_style="green"
+            "[bold blue]nex[/bold blue]\n"
+            "A tool to organize your files into categories.",
+            border_style="blue"
         ))
         
         default_dir = os.getcwd()

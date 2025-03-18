@@ -1,10 +1,10 @@
-# File Organizer Documentation
+# nex Documentation
 
-Welcome to the File Organizer documentation. This tool helps you organize messy directories by categorizing files into appropriate folders.
+Welcome to the nex documentation. This tool helps you organize messy directories by categorizing files into appropriate folders.
 
 ## Documentation Sections
 
-- [User Guide](user_guide.md) - Learn how to use File Organizer
+- [User Guide](user_guide.md) - Learn how to use nex
 - [Installation Guide](installation.md) - Detailed installation instructions
 - [API Documentation](api_docs.md) - Documentation for developers
 - [Examples](examples.md) - Practical usage examples
@@ -13,20 +13,20 @@ Welcome to the File Organizer documentation. This tool helps you organize messy 
 ## Quick Start
 
 ```bash
-# Install
-pip install file-organizer
+# Install from GitHub
+pip install git+https://github.com/S5SAJID/nex.git
 
 # Run
-file-organizer
+nex
 ```
 
 Follow the interactive prompts to organize your files!
 
 ## Project Links
 
-- [GitHub Repository](https://github.com/yourusername/file-organizer)
-- [Issue Tracker](https://github.com/yourusername/file-organizer/issues)
-- [PyPI Package](https://pypi.org/project/file-organizer/)
+- [GitHub Repository](https://github.com/S5SAJID/nex)
+- [Issue Tracker](https://github.com/S5SAJID/nex/issues)
+# - [PyPI Package](https://pypi.org/project/nex/)  # Uncomment when available
 
 ## License
 

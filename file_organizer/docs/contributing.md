@@ -1,14 +1,14 @@
-# Contributing to File Organizer
+# Contributing to nex
 
-Thank you for your interest in contributing to File Organizer! This guide will help you get started with setting up your development environment and making contributions.
+Thank you for your interest in contributing to nex! This guide will help you get started with setting up your development environment and making contributions.
 
 ## Setting Up Development Environment
 
 1. Fork the repository on GitHub
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/yourusername/file-organizer.git
-   cd file-organizer
+   git clone https://github.com/yourusername/nex.git
+   cd nex
    ```
 3. Install the package in development mode:
    ```bash
@@ -125,4 +125,4 @@ When making changes, please update the relevant documentation:
 - Provide constructive feedback
 - Focus on the code, not the person
 
-Thank you for contributing to File Organizer! 
+Thank you for contributing to nex! 

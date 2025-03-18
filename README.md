@@ -1,4 +1,4 @@
-# File Organizer
+# nex
 
 An interactive CLI tool to organize messy directories by categorizing files into appropriate folders.
 
@@ -11,14 +11,32 @@ An interactive CLI tool to organize messy directories by categorizing files into
 - User confirmation for all operations
 
 ## Installation
+
+Currently, nex is available for installation directly from GitHub:
+
 ```bash
-pip install file-organizer
+# Install directly from GitHub
+pip install git+https://github.com/S5SAJID/nex.git
+```
+
+After installation, you can run the tool with:
+
+```bash
+nex
+```
+
+## Future Availability
+
+nex will be available on PyPI in the future. Once published, you'll be able to install it with:
+
+```bash
+pip install nex  # Not available yet
 ```
 
 ## Usage
 Run the tool:
 ```bash
-file-organizer
+nex
 ```
 
 ## Follow the interactive prompts to:
@@ -41,7 +59,7 @@ Files are organized into the following categories based on their extensions:
 
 ## Project Structure Detection
 
-File Organizer automatically detects when it's running in a project directory (containing files like `requirements.txt`, `package.json`, or directories like `src`, `.git`, etc.) and takes special care:
+nex automatically detects when it's running in a project directory (containing files like `requirements.txt`, `package.json`, or directories like `src`, `.git`, etc.) and takes special care:
 
 - Critical project files like `main.py`, `README.md`, and configuration files won't be moved
 - A warning will be shown before organizing project directories
@@ -50,15 +68,15 @@ File Organizer automatically detects when it's running in a project directory (c
 ### Command Line Options
 
 ```
-file-organizer --dir /path/to/directory  # Specify directory to organize
-file-organizer --exclude "*.py"          # Exclude Python files
-file-organizer --exclude "data/*"        # Exclude files in data directory
-file-organizer --no-project-detection    # Disable project detection
+nex --dir /path/to/directory  # Specify directory to organize
+nex --exclude "*.py"          # Exclude Python files
+nex --exclude "data/*"        # Exclude files in data directory
+nex --no-project-detection    # Disable project detection
 ```
 
 ## Limitations
 
-While File Organizer tries to be smart about detecting project structures, it's not perfect. Always review the proposed changes before confirming, especially in development directories.
+While nex tries to be smart about detecting project structures, it's not perfect. Always review the proposed changes before confirming, especially in development directories.
 
 ## License
 MIT

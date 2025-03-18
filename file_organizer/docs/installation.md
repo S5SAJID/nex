@@ -1,59 +1,72 @@
-# File Organizer Installation Guide
+# nex Installation Guide
 
-This guide provides detailed instructions for installing File Organizer on different operating systems.
+This guide provides detailed instructions for installing nex on different operating systems.
 
 ## Prerequisites
 
 - Python 3.7 or later
 - pip (Python package manager)
+- Git (for installation from GitHub)
 
-## Installation Methods
+## Current Installation Method
 
-### From PyPI (Recommended)
+Currently, nex is only available for installation from GitHub:
 
-The simplest way to install File Organizer is through pip:
+### Installing from GitHub
 
 ```bash
-pip install file-organizer
+# Install the latest version from the main branch
+pip install git+https://github.com/S5SAJID/nex.git 
+
+# Or, to install a specific version/branch
+pip install git+https://github.com/S5SAJID/nex.git@v0.1.0
 ```
 
 For a user-specific installation (no admin rights):
 
 ```bash
-pip install --user file-organizer
+pip install --user git+https://github.com/S5SAJID/nex.git
 ```
 
-### From Source
+### Development Installation
 
-If you want the latest development version:
+If you want to contribute or modify the code:
 
 ```bash
-git clone https://github.com/yourusername/file-organizer.git
-cd file-organizer
+git clone https://github.com/S5SAJID/nex.git
+cd nex
 pip install -e .
+```
+
+## Future Installation Methods
+
+In the future, nex will be available on PyPI and can be installed with:
+
+```bash
+pip install nex  # Coming soon
 ```
 
 ## Platform-Specific Notes
 
 ### Windows
 
-Make sure Python is added to your PATH during installation. After installing, you can run File Organizer from the command prompt or PowerShell:
+Make sure Python and Git are added to your PATH during installation. After installing nex, you can run it from the command prompt or PowerShell:
 
 ```
-file-organizer
+nex
 ```
 
 If you installed with `--user`, the executable might be in:
 ```
-%APPDATA%\Python\Python3x\Scripts\file-organizer
+%APPDATA%\Python\Python3x\Scripts\nex
 ```
 
 ### macOS
 
-If you installed Python using Homebrew, you can install File Organizer with:
+If you installed Python using Homebrew, you can install nex with:
 
 ```bash
-pip3 install file-organizer
+pip3 install nex
 ```
 
 ### Linux
@@ -68,16 +81,16 @@ sudo apt-get install python3-pip
 # Fedora
 sudo dnf install python3-pip
 
-# Then install File Organizer
-pip3 install file-organizer
+# Then install nex
+pip3 install nex
 ```
 
 ## Verifying Installation
 
-To verify that File Organizer installed correctly:
+To verify that nex installed correctly:
 
 ```bash
-file-organizer --help
+nex --help
 ```
 
 This should display the help message with available options.
@@ -87,7 +100,7 @@ This should display the help message with available options.
 To upgrade to the latest version:
 
 ```bash
-pip install --upgrade file-organizer
+pip install --upgrade nex
 ```
 
 ## Troubleshooting
@@ -99,7 +112,7 @@ If you get a "command not found" error:
 1. Make sure the Python scripts directory is in your PATH
 2. Try installing with:
    ```bash
-   pip install --user file-organizer
+   pip install --user nex
    ```
    and then add `~/.local/bin` (Linux/macOS) or `%APPDATA%\Python\Python3x\Scripts` (Windows) to your PATH
 
@@ -111,7 +124,7 @@ If you encounter dependency conflicts:
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install file-organizer
+   pip install nex
    ```
 
 ### Permission Errors
@@ -120,9 +133,9 @@ If you get permission errors during installation:
 
 1. Try installing with `--user`:
    ```bash
-   pip install --user file-organizer
+   pip install --user nex
    ```
 2. On Unix-like systems, you may need to use sudo (not recommended):
    ```bash
-   sudo pip install file-organizer
+   sudo pip install nex
    ``` 
