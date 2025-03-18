@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "file-organizer"
+version = "0.1.0"
+description = "An interactive CLI tool to organize files into appropriate folders"
+readme = "README.md"
+authors = [
+    {name = "S5SAJID", email = "s5sajidyt@gmail.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "rich>=13.9.4",
+]
+
+[project.scripts]
+file-organizer = "file_organizer.main:main"
+
+[tool.setuptools]
+packages = ["file_organizer"] 
